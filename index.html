@@ -258,6 +258,9 @@ footer{padding-block:16px 40px;color:var(--faint);font-size:12.5px;border-top:1p
 .intent{margin:16px 0 0;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
 .intent .lbl{display:inline-block;font-size:12px;font-weight:700;color:var(--paper);background:var(--muted);padding:1px 8px;border-radius:3px;margin-right:8px;vertical-align:1px}
 .feat{margin-top:14px}
+.dline{margin:9px 0 0;font-size:15.5px;line-height:1.6;color:var(--ink-2)}
+.dline .lbl{display:inline-block;font-size:12px;font-weight:700;color:var(--sheet);background:var(--acc,var(--muted));padding:1px 8px;border-radius:3px;margin-right:8px;vertical-align:1px}
+.dline b{font-weight:700;color:var(--ink)}
 .w-side{display:flex;flex-direction:column;gap:10px;position:sticky;top:24px}
 .shot{position:relative;aspect-ratio:16/10;max-width:100%;border:1.5px dashed var(--faint);border-radius:8px;
   background:linear-gradient(135deg,var(--need-soft),var(--rule-soft) 55%,var(--proof-soft));
@@ -516,7 +519,8 @@ body{word-break:keep-all;overflow-wrap:break-word}
   .res span{margin-top:.5vh}
   .gap-line{margin-top:.8vh}
   .intent{margin-top:1.6vh;font-size:clamp(14px,1.8vh,17px);line-height:1.55}
-  .chart{margin-top:1.6vh;padding:1.4vh 18px}
+  .dline{margin-top:.9vh;font-size:clamp(13.5px,1.75vh,16.5px);line-height:1.55}
+  .chart{margin-top:1.2vh;padding:1.2vh 18px}
   .chart figcaption{margin-bottom:1vh;font-size:13px}
   .dv{gap:.8vh 14px}
   .track{height:2.2vh;min-height:14px}
@@ -524,7 +528,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
   .stack{height:2.8vh;min-height:18px}
   .stack-l{margin-top:.8vh}
   .stack-l b{font-size:clamp(14px,2vh,17px)}
-  .feat{margin-top:1.6vh}
+  .feat{margin-top:1.2vh}
   .feat li{font-size:12.5px;padding:2px 10px}
   details.more{margin-top:1.2vh}
   .foot{margin-top:1.2vh}
@@ -537,6 +541,19 @@ body{word-break:keep-all;overflow-wrap:break-word}
   .etc-thumb{aspect-ratio:auto;height:26vh}
 }
 
+@media (min-width:1201px) and (max-height:840px){
+  .slide.proj{padding-block:2vh 6.5vh}
+  .slide.proj .work,.slide.proj .lite{gap:1.4vh clamp(24px,3vw,44px)}
+  .p-n{font-size:clamp(40px,7.6vh,120px);margin-bottom:.4vh}
+  .p-msg{font-size:clamp(20px,3.7vh,46px);margin:1.1vh 0 1.3vh}
+  .res>div{padding-block:.9vh}
+  .intent{margin-top:1.1vh}
+  .dline{margin-top:.7vh}
+  .chart{margin-top:1.1vh;padding:1vh 16px}
+  .feat{margin-top:1.1vh}
+  details.more{margin-top:.9vh}
+  .shot{max-height:46vh}
+}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -544,7 +561,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
 
 <div class="shell">
 <aside class="side" aria-label="목차">
-  <div class="who"><b>이정민</b><span>현장의 불편을 작동하는 도구로 만드는 기획자</span></div>
+  <div class="who"><b>이정민</b><span>문제를 데이터로 설계하고, 직접 만들어 검증하는 기획자</span></div>
   <nav aria-label="섹션 목차">
     <div class="grp"><h2>소개</h2><ul>
       <li><a href="#top"><span class="n">00</span><span>소개</span></a></li>
@@ -576,20 +593,20 @@ body{word-break:keep-all;overflow-wrap:break-word}
 <main class="main">
 <section class="slide hero" id="top" aria-labelledby="hero-title">
   <p class="name">이정민 · 서비스 기획 · AI 프로덕트</p>
-  <h1 id="hero-title">현장의 불편을<br><span class="scribble">작동하는 도구</span>로 만드는 기획자</h1>
+  <h1 id="hero-title">문제를 <span class="scribble">데이터</span>로 설계하고,<br>직접 만들어 검증하는 기획자</h1>
   <ol class="flow" aria-label="일하는 순서">
-    <li class="k-need"><span class="kword">니즈 발견</span></li>
-    <li class="k-rule"><span class="kword">판단 기준 설계</span></li>
-    <li class="k-proof"><span class="kword">검증</span></li>
+    <li class="k-need"><span class="kword">문제 발견</span></li>
+    <li class="k-rule"><span class="kword">데이터 설계</span></li>
+    <li class="k-proof"><span class="kword">만들어 검증</span></li>
   </ol>
   <div class="flow-desc">
-    <p class="k-need"><b class="tag">니즈 발견</b>누가, 언제, 무엇 때문에 멈추는지 먼저 적습니다.</p>
-    <p class="k-rule"><b class="tag">판단 기준 설계</b>감으로 하던 판단을 계산할 수 있는 규칙으로 바꿉니다.</p>
-    <p class="k-proof"><b class="tag">검증</b>숫자로 확인하고, 안 되는 것과 가상 데이터를 밝힙니다.</p>
+    <p class="k-need"><b class="tag">문제 발견</b>누가, 언제, 무엇 때문에 멈추는지 먼저 적습니다.</p>
+    <p class="k-rule"><b class="tag">데이터 설계</b>흩어진 데이터를 분석·가공해 서비스가 쓸 수 있는 형태로 만듭니다.</p>
+    <p class="k-proof"><b class="tag">만들어 검증</b>직접 만들어 숫자로 확인하고, 안 되는 것과 가상 데이터를 밝힙니다.</p>
   </div>
   <div class="intro">
-    <p>의류 MD로 <span class="fill">[N]년</span> 일하며 매일 판매와 재고를 판단했습니다. 그 경험에서 출발해 현업 실무자, 커머스 고객, 일상 사용자를 위한 서비스를 만들었습니다. 코드는 AI 코딩 도구와 함께 구현했고, 문제 정의와 판단 기준과 검수는 직접 했습니다.</p>
-    <p><b>선정 기준</b> · 작업이 증명하는 역량에 따라 묶었습니다. 니즈·기준·검증이 모두 저장소에 근거로 남은 작업은 크게, 하나라도 빠진 작업은 작게 보여 주고 빠진 항목을 적었습니다.</p>
+    <p>커머스 현장에서 <b>리테일 매장 관리 · 온라인 MD · 라이브 커머스</b>를 오가며 매일의 판매·재고 데이터를 판단했고, 거기서 사용자와 시장을 읽는 눈을 키웠습니다. 그 경험으로 현업 실무자, 커머스 고객, 일상 사용자를 위한 서비스 6종을 만들었습니다. 코드는 AI 코딩 도구와 함께 구현했고, <b>문제 정의 · 데이터 설계 · 검수</b>는 직접 했습니다.</p>
+    <p><b>선정 기준</b> · 작업이 증명하는 역량에 따라 묶었습니다. 문제·데이터 설계·검증이 모두 저장소에 근거로 남은 작업은 크게, 하나라도 빠진 작업은 작게 보여 주고 빠진 항목을 적었습니다.</p>
   </div>
 </section>
 
@@ -658,7 +675,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
           <span class="ov-body">
             <span class="ov-top"><b class="ov-name">스터디카페</b><span class="ov-kind">개인</span></span>
             <span class="ov-what">캐릭터로 입장해 말없이 함께 공부하는 3D 스터디카페</span>
-            <span class="ov-res">사이트 공개 · 이용 기록 전</span>
+            <span class="ov-res">사이트 공개 · GA4 수집 중</span>
           </span>
         </a>
       </div>
@@ -678,6 +695,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <p class="p-msg">MD가 아침에 먼저 볼 상품, 계산으로 정한다</p>
       <div class="res"><div><b data-count="43.0" data-dec="1" data-suffix="%">43.0%</b><span>9월 판매 추정 오차율 (보정 전 53.1%)</span></div><div><b data-count="11" data-suffix="/11">11/11</b><span>미리 예상한 재고 부족 상품이 실제와 일치</span></div></div>
       <p class="intent"><span class="lbl">기획 의도</span>주니어 MD가 할인·추가 매입을 실행 전에 손익으로 비교하게 하려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span>H&amp;M 공개 판매 데이터 <b>105,542종</b>을 분석·가공해 판단 규칙의 입력으로 재구성했습니다.</p>
       <figure class="chart" aria-label="10% 할인 시나리오 차트">
         <figcaption><b>10% 할인하면?</b>예상 판매 634개 → 800개 (MD 입력 가정)</figcaption>
         <div class="dv">
@@ -712,17 +730,18 @@ body{word-break:keep-all;overflow-wrap:break-word}
   <p class="slide-g">AI를 믿을 수 있게 설계한다 <span>1 / 3</span></p>
   <article class="work pending" aria-labelledby="t2">
     <div class="w-main">
-      <div class="p-head"><h3 id="t2"><span class="p-n">02</span>AI Newsroom OS</h3><p class="p-meta">팀 5인 · 배포·자동화 담당 · 2026.10</p></div>
+      <div class="p-head"><h3 id="t2"><span class="p-n">02</span>AI Newsroom OS</h3><p class="p-meta">팀 5인 · 콘텐츠 변환 설계 담당 · 2026.10</p></div>
       <p class="p-msg">기사 한 편을 SNS 3종으로, 원문 그대로</p>
       <div class="res"><div><b>3종</b><span>Instagram · Threads · 카드뉴스</span></div><div><b data-count="45" data-suffix="개">45개</b><span>변환 영역 테스트 통과</span></div></div>
       <p class="intent"><span class="lbl">기획 의도</span>기사를 SNS용으로 바꿀 때 원문에 없는 말이 섞이지 않게 하려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span>원본 기사 한 편을 <b>플랫폼별 맞춤 프롬프트 3종</b>으로 설계했습니다. Instagram·Threads·카드뉴스가 각각 다른 규칙을 씁니다.</p>
       
       <ul class="feat"><li>저장된 원고에서만 변환</li><li>문장마다 원문 근거</li><li>사람이 확인해야 게시</li></ul>
       <details class="more"><summary>판단 기준과 한계 보기</summary>
-        <div class="more-body"><div><b>담당 범위</b><ul><li>플랫폼 변환, n8n, 카드 이미지 생성</li><li>결과물을 주고받는 형식 정의</li><li>본인 커밋 39건</li></ul></div><div><b>팀원 담당</b><ul><li>앱 코어·저장</li><li>녹취, 기사 작성·미리보기</li></ul></div><p class="caveat">테스트는 가짜 응답으로 실행했고, 실제 SNS 게시 성공까지 확인하지는 않았습니다.</p></div>
+        <div class="more-body"><div><b>담당 범위</b><ul><li>플랫폼별 프롬프트 설계</li><li>n8n 자동화, 카드 이미지 생성</li><li>결과물을 주고받는 형식 정의</li><li>본인 커밋 39건</li></ul></div><div><b>팀원 담당</b><ul><li>앱 코어·저장</li><li>녹취, 기사 작성·미리보기</li></ul></div><p class="caveat">테스트는 가짜 응답으로 실행했고, 실제 SNS 게시 성공까지 확인하지는 않았습니다.</p></div>
       </details>
       <div class="foot">
-        <p class="spec">팀 5인 중 배포·자동화 담당 · Node.js · Express · OpenAI · n8n</p>
+        <p class="spec">팀 5인 중 콘텐츠 변환·자동화 담당 · Node.js · Express · OpenAI · n8n</p>
         <div class="links"><a class="primary" href="https://github.com/beang66/ai-newsroom-os/tree/feature/platform-generator" target="_blank" rel="noopener">GitHub (담당 브랜치) ↗</a></div>
       </div>
     </div>
@@ -746,6 +765,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <p class="p-msg">말이나 사진으로 찾고, 없는 상품은 권하지 않는다</p>
       <div class="res"><div><b data-count="23" data-suffix="/23">23/23</b><span>백엔드 테스트 통과</span></div><div><b>4종</b><span>사진으로 구분하는 가구 (소파·의자·식탁·침대)</span></div></div>
       <p class="intent"><span class="lbl">기획 의도</span>조건 필터뿐이던 가구몰에서 고객이 말과 사진으로 상품을 찾게 하려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span>상품 DB를 <b>벡터로 변환(RAG)</b>하고 사진 인식(YOLO11)을 붙여, 검색 입력을 말과 사진까지 넓혔습니다.</p>
       
       <ul class="feat"><li>문장으로 상품 찾기</li><li>사진으로 종류 찾기</li><li>회원·관리자 권한 분리</li></ul>
       <details class="more"><summary>판단 기준과 한계 보기</summary>
@@ -776,6 +796,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <p class="p-msg">아티스트의 최근 소식이 곧 굿즈 추천</p>
       <div class="res"><div><b>하루 1회</b><span>아티스트당 AI 호출로 비용 관리</span></div><div><b>3건</b><span>브리핑마다 보여 주는 근거 기사</span></div></div><p class="gap-line"><span class="gap">효과 측정 기록 없음</span></p>
       <p class="intent"><span class="lbl">기획 의도</span>팬이 아티스트 소식과 연결된 굿즈를 바로 보게 하려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span>아티스트의 최근 소식을 <b>굿즈 속성과 잇는 연결 규칙</b>으로 설계했습니다.</p>
       
       <ul class="feat"><li>소식과 굿즈 연결</li><li>장바구니 기반 순서</li><li>실패 시 규칙 추천</li></ul>
       <div class="foot">
@@ -803,6 +824,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <p class="p-msg">처음 보는 사람들이 일기 153건을 썼다</p>
       <div class="res"><div><b data-count="153" data-suffix="건">153건</b><span>실제 사용자가 쓴 일기</span></div><div><b data-count="415" data-suffix="명">415명</b><span>배포 후 누적 방문자</span></div></div>
       <p class="intent"><span class="lbl">기획 의도</span>챗봇의 위로가 와닿지 않는 사람이 일기를 쓰기 시작하게 하려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span><b>심리학 감정 분류</b>와 아시아 8개국 요괴 설화 73종을 매칭용 DB로 분석·가공했습니다.</p>
       <figure class="chart" aria-label="요괴 매칭 점수 구성 차트">
         <figcaption><b>요괴를 고르는 100점 규칙</b></figcaption>
         <div class="stack" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -835,8 +857,9 @@ body{word-break:keep-all;overflow-wrap:break-word}
     <div class="w-main">
       <div class="p-head"><h3 id="t7"><span class="p-n">06</span>스터디카페</h3><p class="p-meta">개인 · 배포</p></div>
       <p class="p-msg">말없이, 같이 공부하는 방</p>
-      <div class="res"><div><b>20석 · 9관</b><span>한 관의 자리와 최대 공간 수</span></div><div><b>서버 0대</b><span>브라우저끼리 직접 연결</span></div></div><p class="gap-line"><span class="gap">이용 기록 측정 전</span></p>
+      <div class="res"><div><b>20석 · 9관</b><span>한 관의 자리와 최대 공간 수</span></div><div><b>서버 0대</b><span>브라우저끼리 직접 연결</span></div></div><p class="gap-line"><span class="gap">GA4 방문자 동향 수집 중</span></p>
       <p class="intent"><span class="lbl">기획 의도</span>화상 스터디가 부담스러운 사람에게 같이 공부하는 느낌만 주려고 만들었습니다.</p>
+      <p class="dline"><span class="lbl">데이터 설계</span><b>GA4</b>를 붙여 방문자 동향과 체류 패턴을 수집하고 있습니다.</p>
       
       <ul class="feat"><li>자세로 상태 표시</li><li>포스트잇 쪽지</li><li>끊겨도 이어지는 타이머</li></ul>
       <div class="foot">
@@ -891,9 +914,9 @@ body{word-break:keep-all;overflow-wrap:break-word}
 <section class="slide role" id="role" aria-labelledby="role-title">
   <div class="ghead"><h2 id="role-title">역할과 도구</h2><p>무엇을 직접 했고, 무엇을 AI와 나눴는지</p></div>
   <dl class="split">
-    <div><dt>직접 한 일</dt><dd>사용자 문제 정의, 판단 기준과 계산 규칙, 데이터 출처 구분, 화면 흐름, 검수 기준, 결과 검토와 수정 지시</dd></div>
+    <div><dt>직접 한 일</dt><dd>사용자 문제 정의, <b>데이터 분석·가공과 DB 설계</b>, 판단 기준과 계산 규칙, 데이터 출처 구분, 화면 흐름, 검수 기준, 결과 검토와 수정 지시</dd></div>
     <div><dt>AI와 나눈 일</dt><dd>코드 구현, 테스트·검증 스크립트 작성 (Codex, Claude Code)</dd></div>
-    <div><dt>팀에서 한 일</dt><dd>5인 팀의 배포·자동화 담당. 다른 영역과 주고받는 형식을 맞추고 통합 테스트 결과를 기록</dd></div>
+    <div><dt>팀에서 한 일</dt><dd>5인 팀의 콘텐츠 변환·자동화 담당. 플랫폼별 프롬프트를 설계하고, 다른 영역과 주고받는 형식을 맞춰 통합 테스트 결과를 기록</dd></div>
     <div><dt>사용한 도구</dt><dd>Python · pandas · React · FastAPI · Supabase · PostgreSQL · n8n · Gemini · OpenAI · GitHub Pages · Render</dd></div>
   </dl>
 </section>
@@ -901,7 +924,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
 <section class="slide end" id="contact" aria-label="마무리와 연락처">
 <div class="closing">
   <p class="thanks"><span class="scribble">감사합니다.</span></p>
-  <h2 id="closing-title">현장의 불편을 작동하는 도구로 만드는 기획자, 이정민</h2>
+  <h2 id="closing-title">문제를 데이터로 설계하고, 직접 만들어 검증하는 기획자 이정민</h2>
 </div>
 <div class="contact">
   <p>서비스 기획, 커머스·리테일 프로덕트, AI 업무 자동화 직무를 찾고 있습니다.</p>
